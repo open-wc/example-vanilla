@@ -1,0 +1,26 @@
+{
+  "name": "example-vanilla",
+  "version": "0.0.0",
+  "description": "Webcomponent example-vanilla following open-wc recommendations",
+  "author": "example-vanilla",
+  "homepage": "https://github.com/open-wc/open-wc/",
+  "license": "MIT",
+  "repository": "https://github.com/open-wc/open-wc/",
+  "dependencies": {
+    "lit-html": "^0.12.0"
+  },
+  "scripts": {
+    "lint:eslint": "eslint --ext .js,.html .",
+    "storybook:build": "build-storybook",
+    "storybook:start": "start-storybook -p 9001 -c .storybook",
+    "test": "karma start",
+    "test:bs": "karma start karma-bs.config.js"
+  },
+  "devDependencies": {
+    "@open-wc/eslint-config": "^0.1.1",
+    "@open-wc/storybook": "^0.1.1",
+    "@open-wc/testing": "^0.2.0",
+    "@open-wc/testing-karma": "^0.1.0",
+    "@open-wc/testing-karma-bs": "^0.0.1"
+  }
+}
