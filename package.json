@@ -11,16 +11,20 @@
   },
   "scripts": {
     "lint:eslint": "eslint --ext .js,.html .",
-    "storybook:build": "build-storybook",
-    "storybook:start": "start-storybook -p 9001 -c .storybook",
+    "build-site": "npm run vuepress:build && npm run storybook:build",
+    "storybook:build": "build-storybook -o _site/demos",
+    "storybook:start": "start-storybook",
     "test": "karma start",
-    "test:bs": "karma start karma-bs.config.js"
+    "test:bs": "karma start karma-bs.config.js",
+    "vuepress:build": "vuepress build docs",
+    "vuepress:start": "vuepress dev docs"
   },
   "devDependencies": {
     "@open-wc/eslint-config": "^0.1.1",
     "@open-wc/storybook": "^0.1.1",
     "@open-wc/testing": "^0.2.0",
     "@open-wc/testing-karma": "^0.1.0",
-    "@open-wc/testing-karma-bs": "^0.0.1"
+    "@open-wc/testing-karma-bs": "^0.0.1",
+    "vuepress": "^1.0.0-alpha.8"
   }
 }
